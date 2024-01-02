@@ -87,7 +87,7 @@ export default {
           }
         })
         .catch(function(error) {
-          if (error.response && error.response.data && error.response.data.Err) {
+          if (error.response&&error.response.data&&error.response.data.Err) {
             self.snacktext = error.response.data.Err;
             self.snackbar = true;
           } else {

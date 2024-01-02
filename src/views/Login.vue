@@ -85,6 +85,15 @@ export default {
             }
             window.location.href = "/";
           }
+        })
+        .catch(function(error) {
+          if (error.response && error.response.data && error.response.data.Err) {
+            self.snacktext = error.response.data.Err;
+            self.snackbar = true;
+          } else {
+            self.snackbar = "There was something wrong!";
+            self.snackbar = true;
+          }
         });
     }
   }
